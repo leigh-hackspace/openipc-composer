@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Set the fw value wlandev for the Tapo C310 if unset
+fw_printenv wlandev > /dev/null
+if [ $? -eq 1 ]; then
+  fw_setenv wlandev "rtl8192eu-ssc-335-tapo-c310"
+fi
