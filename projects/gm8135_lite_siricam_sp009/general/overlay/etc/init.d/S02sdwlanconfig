@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -e /mnt/mmcblk0p1/wlan_config ]; then
+    source /mnt/mmcblk0p1/wlan_config
+    if [ -n ${wlanssid+1} ]; then
+        fw_setenv wlanssid $wlanssid
+    fi
+    if [ -n ${wlanpass+1} ]; then
+        fw_setenv wlanpass $wlanpass
+    fi
+
+    mv /mnt/mmcblk0p1/wlan_config /mnt/mmcblk0p1/wlan_config.applied
+fi
