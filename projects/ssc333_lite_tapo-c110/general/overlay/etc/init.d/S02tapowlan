@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Set the fw value wlandev for the Tapo C110 if unset
 fw_printenv wlandev > /dev/null 2>&1
