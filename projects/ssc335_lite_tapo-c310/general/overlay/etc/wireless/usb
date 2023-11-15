@@ -99,6 +99,7 @@ fi
 
 # SSC335 Tapo C310
 if [ "$1" = "rtl8192eu-ssc335-tapo-c310" ]; then
+    set_gpio 16 1
 	modprobe 8192eu
 	exit 0
 fi
