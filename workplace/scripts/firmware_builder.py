@@ -29,7 +29,7 @@ def main():
             print('Rootfs: {0}'.format(rootfs.name))
 
     # Get u-boot from OpenIPC
-    url = "https://github.com/OpenIPC/firmware/releases/download/latest/u-boot-{0}-nor.bin".format(soc)
+    url = "https://jenkins.int.leighhack.org/job/OpenIPC-Builds/job/u-boot-sigmastar/lastSuccessfulBuild/artifact/output/u-boot-{0}-nor.bin".format(soc)
     print('U-boot: {0}'.format(url))
     resp = requests.get(url)
     if not resp.ok:
